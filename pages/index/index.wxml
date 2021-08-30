@@ -1,0 +1,30 @@
+<home wx:if="{{PageCur=='home'}}"></home>
+<album wx:if="{{PageCur=='live'}}"></album>
+<mark wx:if="{{PageCur=='mark'}}"></mark>
+<about wx:if="{{PageCur=='about'}}"></about>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/home{{PageCur=='home'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='home'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="live">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/live{{PageCur=='live'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='live'?'text-green':'text-gray'}}">空间</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="mark">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/mark{{PageCur=='mark'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='mark'?'text-green':'text-gray'}}">痕迹</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
+  </view>
+</view>

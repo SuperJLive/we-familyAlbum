@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "home": "/pages/home/home/home",
+    "album": "/pages/live/home/home",
+    "mark": "/pages/mark/home/home",
+    "about": "/pages/about/home/home"
+  }
+}

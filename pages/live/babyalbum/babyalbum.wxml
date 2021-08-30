@@ -1,0 +1,44 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">妙妙的美妙时光</view>
+</cu-custom>
+<view class="cu-timeline">
+  <view class="cu-time">6-17</view>
+  <view class="cu-item">
+    <view class="stack">
+      <image src="/images/image1.jpg" mode="widthFix" />
+    </view>
+  </view>
+  <view class="cu-timeline">
+    <view class="cu-time">8-19</view>
+    <view class="cu-item cur">
+
+      <view class="stack rotated">
+        <image src="/images/share.jpg" mode="widthFix" />
+      </view>
+
+    </view>
+  </view>
+  <view class="cu-timeline">
+    <view class="cu-time">9-17</view>
+    <view class="cu-item cur cuIcon-noticefill">
+      <view class="stack twisted">
+        <image src="/images/image1.jpg" mode="widthFix" />
+      </view>
+
+    </view>
+  </view>
+
+    <view class="cu-timeline">
+      <view class="cu-time">11-17</view>
+      <view class="cu-item cur cuIcon-noticefill">
+        <view class="stack rotated-left">
+          <image src="/images/image1.jpg" mode="widthFix" />
+        </view>
+
+
+
+      </view>
+    </view>
+</view>
+    
