@@ -1,2 +1,3 @@
-<!--pages/home/home/home.wxml-->
-<text>pages/home/home/home.wxml</text>
+<cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+  <view slot="content">首页</view>
+</cu-custom>
