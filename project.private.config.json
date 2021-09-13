@@ -17,6 +17,12 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/live/createalbum/createalbum",
+          "pathName": "pages/live/createalbum/createalbum",
+          "query": "",
+          "scene": null
         }
       ]
     }

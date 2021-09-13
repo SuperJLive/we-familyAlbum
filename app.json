@@ -7,7 +7,8 @@
     "pages/live/home/home",
     "pages/home/home/home",
     "pages/mark/home/home",
-    "pages/live/babyalbum/babyalbum"
+    "pages/live/babyalbum/babyalbum",
+    "pages/live/createalbum/createalbum"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

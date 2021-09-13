@@ -11,7 +11,19 @@
   margin-bottom: 50px;
  
 }
-
+.createAlbum {
+	position:fixed;
+	bottom:5px;
+	right:0px;
+	display:flex;
+	width:50px;
+	justify-content:center;
+	z-index: 999;
+	}
+	.createAlbum image{
+		width:40px;
+		height: 40px;
+	}
 /* Image styles */
 .stack image { width:100%;max-width: 100%;  border: 13px solid #fff; border-radius: 3px;vertical-align: bottom;
 	-webkit-box-sizing: border-box;

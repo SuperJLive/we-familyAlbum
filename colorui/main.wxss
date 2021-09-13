@@ -172,13 +172,13 @@ switch::before {
 switch::before {
 	content: "\e646";
 	right: 0;
-	transform: scale(1, 1);
+	transform: scale(1.5, 1.5);
 	left: auto;
 }
 
 switch[checked]::after,
 switch.checked::after {
-	transform: scale(1, 1);
+	transform: scale(1.5, 1.5);
 }
 
 switch[checked]::before,

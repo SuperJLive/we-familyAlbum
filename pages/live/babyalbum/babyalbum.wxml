@@ -40,5 +40,10 @@
 
       </view>
     </view>
+    
 </view>
+<view class="createAlbum">
+      <image src="/images/albumCreate.png" mode="AspectFit"/>
+    </view>
+
     
