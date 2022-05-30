@@ -2,28 +2,101 @@
 .switch-media::after {
 	content: "\e665";
 }
+
 .switch-media::before {
 	content: "\e7c8";
 }
+
 .switch-media .wx-switch-input {
 	background: var(--blue) !important;
 	border-color: var(--blue) !important;
 }
+
 .switch-media .wx-switch-input:not([class*="bg-"]) {
 	background: var(--blue) !important;
 }
+
 .switch-media[checked] .wx-switch-input {
 	background: var(--green) !important;
 	border-color: var(--green) !important;
 }
+
 /*其它的SVG图标*/
 .image-add {
-  background-color:var(--grey);
-  -webkit-mask-image: url(/images/icons/image-add.svg);
-  mask-image: url(/images/icons/image-add.svg);
+	background-color: var(--white);
+	-webkit-mask-image: url(/images/icons/image-add.svg);
+	mask-image: url(/images/icons/image-add.svg);
 }
+
 .video-add {
-  background-color:var(--grey);
-  -webkit-mask-image: url(/images/icons/video-add.svg);
-  mask-image: url(/images/icons/video-add.svg);
+	background-color: var(--grey);
+	-webkit-mask-image: url(/images/icons/video-add.svg);
+	mask-image: url(/images/icons/video-add.svg);
 }
+
+/**/
+.grid.grid-square .cu-delete {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-bottom-left-radius: 6rpx;
+	padding: 6rpx 12rpx;
+	height: auto;
+	color: var(--white);
+	opacity: 0.4;
+	font-size: 36rpx;
+}
+
+.grid.grid-square .cu-cover {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border-bottom-left-radius: 6rpx;
+	padding: 6rpx 12rpx;
+	height: auto;
+	color: var(--white);
+	font-size: 36rpx;
+	opacity: 0.6;
+}
+
+.grid.grid-square .cu-notcover {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border-bottom-left-radius: 6rpx;
+	padding: 6rpx 12rpx;
+	height: auto;
+	color: var(--white);
+	opacity: 0.3;
+	font-size: 36rpx;
+}
+
+.grid.grid-square .cu-edit {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-bottom-left-radius: 6rpx;
+	padding: 6rpx 12rpx;
+	height: auto;
+	color: var(--white);
+	opacity: 0.5;
+	font-size: 36rpx;
+}
+
+.cu-dialog input,
+textarea {
+	font-size: 30rpx;
+	text-align: left;
+}
+
+.input-placeholder {
+	color: rgb(207, 207, 207);
+	text-align: left;
+}
+
+.textarea-placeholder {
+	color: rgb(207, 207, 207);
+	text-align: left;
+}
+
+

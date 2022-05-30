@@ -17,18 +17,27 @@ App({
 		}
       }
     })
-    return;
+    
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res.code);
-        console.log(res);
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: this.globalData.baseUrl+'/wxprog/onlogin/'+res.code,
+            url: this.globalData.baseUrl+'/WeApp/onLogin/'+res.code,
             success (res) {
+              if(res.errMsg){
+                
+              }
+              wx.getUserInfo({
+
+                withCredentials:false,
+                lang:'zh_CN',
+                success:function(res){
+
+                }
+              })
               console.log(res.data)
             }
           })
@@ -40,8 +49,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl: 'http://localhost:9000'
-
-
+    baseUrl: 'http://127.0.0.1:8000'
   }
 })

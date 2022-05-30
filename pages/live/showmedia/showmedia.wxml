@@ -1,0 +1,70 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">卡片</view></cu-custom>
+<view class="padding flex flex-direction">
+		<button class="cu-btn bg-red margin-tb-sm lg" catchtap="ShowEditMediaModal" data-target="MediaModal">提交</button>
+	</view>
+<view class="show-media">
+  <view wx:for="{{photos}}" class="view-li   bg-white" wx:key="index">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/{{item.filename}}"/>{{item.title}}
+  </view>
+  <!-- <view class="view-li  bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm2.jpg"/>2
+  </view>
+  <view class="view-li   bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm3.jpg"/>3
+  </view>
+  <view class="view-li   bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm4.jpg"/>4
+  </view>
+  <view class="view-li  bg-white ">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm5.jpg"/>5
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm1.jpg"/>6
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm7.jpg"/>7
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm8.jpg"/>8
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm9.jpg"/>9
+  </view>
+  <view class="view-li shadow">
+    <image  style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm10.jpg"/>10
+  </view> -->
+</view>
+
+<!-- <view class="show-media">
+  <view class="view-li   bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm1.jpg"/>1
+  </view>
+  <view class="view-li  bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm2.jpg"/>2
+  </view>
+  <view class="view-li   bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm3.jpg"/>3
+  </view>
+  <view class="view-li   bg-white">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm4.jpg"/>4
+  </view>
+  <view class="view-li  bg-white ">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm5.jpg"/>5
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm6.jpg"/>6
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm7.jpg"/>7
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm8.jpg"/>8
+  </view>
+  <view class="view-li shadow">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm9.jpg"/>9
+  </view>
+  <view class="view-li shadow">
+    <image  style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm10.jpg"/>10
+  </view>
+</view> -->
+

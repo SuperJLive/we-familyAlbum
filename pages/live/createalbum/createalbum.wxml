@@ -1,33 +1,47 @@
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
-  <view slot="backText">返回</view>
-  <view slot="content">创建新相册(妙妙)</view>
+	<view slot="backText">返回</view>
+	<view slot="content">创建新相册(妙妙)</view>
 </cu-custom>
 <form>
-<view class="cu-form-group margin-top">
+	<view class="cu-form-group margin-top">
 		<view class="title">标题</view>
 		<input placeholder="填写相册标题"></input>
-</view>
-<view class="cu-bar bg-white margin-top">
-    <view class="action">
-			相册封面 
-		</view>	
-		
-    <view class="action">
-			{{imgList.length}}/8
-		</view> <switch class="switch-media radius margin-right" checked="{{isImage}}"></switch>
-</view>
+	</view>
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			上传图片
+		</view>
 
-<view class="cu-form-group">
-		<view class="grid col-4 grid-square flex-sub">
-			<view class="bg-img" wx:for="{{mediaList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
-				<image src='{{mediaList[index]}}' mode='aspectFill'></image>
-				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
-					<text class="cuIcon-close"></text>
+		<view class="action">
+			{{mediaList.length}}/9
+		</view>
+		<!-- <switch class="switch-media radius margin-right" checked="{{isImage}}" bindchange="mediaTypeChange"></switch> -->
+	</view>
+
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{mediaList}}" wx:key="index" bindtap="ViewMedia"
+				data-url="{{mediaList[index].url}}">
+				<image src='{{mediaList[index].poster}}' mode='aspectFill'></image>
+				<view class="cu-cover bg-orange" data-index="{{index}}" catchtap="AlbumCover"
+					wx:if="{{mediaList[index].isAlbumCover}}">
+					<text class="cuIcon-album"></text>
+				</view>
+				<view class="cu-notcover bg-grey" data-index="{{index}}" catchtap="ChangeAlbumCover" wx:else>
+					<text class="cuIcon-album"></text>
+				</view>
+
+				<view class="cu-edit bg-red" data-index="{{index}}" catchtap="ShowEditMediaModal" data-target="Image">
+					<text class="cuIcon-edit"></text>
+				</view>
+				<view class="cu-delete bg-black" catchtap="DeleteMedia" data-index="{{index}}">
+					<text class="cuIcon-delete"></text>
 				</view>
 			</view>
-			<view class="solids" bindtap="chooseMedias" wx:if="{{mediaList.length<4}}">
-				<text class="{{isImage?'cuIcon-cameraadd':'cuIcon-video'}}"></text>
+			<view class="solids" bindtap="ChooseMedias" wx:if="{{mediaList.length<9}}">
+				<text class="cuIcon-cameraadd"></text>
 			</view>
+
 		</view>
 	</view>
 	<view class="cu-form-group margin-top">
@@ -38,12 +52,35 @@
 			</view>
 		</picker>
 	</view>
-  <view class="cu-form-group">
+	<view class="cu-form-group">
 		<view class="title">密码</view>
 		<input placeholder="如需限制访问可输入密码"></input>
-</view>
-<view class="cu-form-group align-start">
+	</view>
+	<view class="cu-form-group align-start">
 		<view class="title">简述</view>
-		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="填写相册简述"></textarea>
+		<textarea maxlength="500" placeholder="填写相册简述">
+		</textarea>
+	</view>
+	<view class="padding flex flex-direction">
+		<button class="cu-btn bg-red margin-tb-sm lg" catchtap="ShowEditMediaModal" data-target="MediaModal">提交</button>
 	</view>
 </form>
+
+<view class="cu-modal {{modalName=='MediaModal'?'show':''}}">
+	<view class="cu-dialog">
+		<view>
+			<image src='/images/AlbumBg.jpg' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">标题</view>
+			<input placeholder="填写图片标题" ></input><checkbox class="selected"></checkbox>
+		</view>
+		<view class="cu-form-group align-start">
+			<view class="title">简述</view>
+			<textarea maxlength="500" placeholder="填写相册简述"></textarea>
+		</view>
+		<view class="padding flex flex-direction">
+			<button class="cu-btn bg-green margin-tb-sm lg" catchtap="HideEditMediaModal" data-target="MediaModal">確定</button>
+		</view>
+	</view>
+</view>

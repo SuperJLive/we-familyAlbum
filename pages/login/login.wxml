@@ -1,0 +1,6 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+  <view slot="content">登录</view>
+</cu-custom>
+<view class="login">
+  <button id="login" class="ui-btn bg-blue">一键登录</button>
+</view>

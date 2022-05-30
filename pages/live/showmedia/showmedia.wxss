@@ -1,0 +1,31 @@
+.show-media {
+  margin: 8rpx;
+  column-count: 2;
+  column-gap: 8rpx;
+  -webkit-column-break-inside:avoid;
+  break-inside: avoid;
+  /* display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  flex-wrap:wrap; */
+  
+}
+.view-li{
+
+  /* padding: 10rpx 10rpx 7rpx 10rpx; */
+  padding: 8rpx;
+  margin: 0 0 6rpx;
+  background-color: var(--white);
+
+  
+}
+.first-two{
+  padding: 5px;
+  background-color: var(--white);
+
+}
+.test
+{
+  padding: 10rpx 10rpx 8rpx 10rpx;
+  background-color: var(--white);
+}

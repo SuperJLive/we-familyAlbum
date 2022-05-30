@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
     "pages/test1/test",
@@ -8,7 +9,10 @@
     "pages/home/home/home",
     "pages/mark/home/home",
     "pages/live/babyalbum/babyalbum",
-    "pages/live/createalbum/createalbum"
+    "pages/live/createalbum/createalbum",
+    "pages/live/Photo/photo",
+    "pages/live/showphoto/showphoto",
+    "pages/live/showmedia/showmedia"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

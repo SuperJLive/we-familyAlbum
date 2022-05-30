@@ -1,0 +1,36 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+   <view slot="backText">返回</view>
+   <view slot="content">卡片</view>
+</cu-custom>
+<view class="waterfall">
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm1.jpg"/>1
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm2.jpg"/>2
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm3.jpg"/>3
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm4.jpg"/>4
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm5.jpg"/>5
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm6.jpg"/>6
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm7.jpg"/>7
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm8.jpg"/>8
+  </view>
+  <view class="item">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm9.jpg"/>9
+  </view>
+  <view class="item">
+    <image  style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm10.jpg"/>10
+  </view>
+</view>
