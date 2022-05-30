@@ -1,6 +1,15 @@
 <cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
   <view slot="content">登录</view>
 </cu-custom>
-<view class="login">
-  <button id="login" class="ui-btn bg-blue">一键登录</button>
+<view class="container login">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 一键登录 </button>
+      <button class="ui-btn bg-blue" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
 </view>

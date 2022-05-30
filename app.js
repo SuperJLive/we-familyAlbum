@@ -23,6 +23,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
+          console.log(res.code)
           //发起网络请求
           wx.request({
             url: this.globalData.baseUrl+'/WeApp/onLogin/'+res.code,
@@ -30,12 +31,11 @@ App({
               if(res.errMsg){
                 
               }
-              wx.getUserInfo({
-
+              wx.getUserProfile({
                 withCredentials:false,
                 lang:'zh_CN',
                 success:function(res){
-
+                  console.log(res);
                 }
               })
               console.log(res.data)

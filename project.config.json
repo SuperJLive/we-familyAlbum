@@ -40,10 +40,11 @@
     "disableUseStrict": false,
     "useCompilerPlugins": false,
     "minifyWXML": true,
-    "useStaticServer": true
+    "useStaticServer": true,
+    "lazyloadPlaceholderEnable": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.24.3",
+  "libVersion": "2.18.1",
   "appid": "wx224848dcd0a8cf8b",
   "projectname": "FamilyAlbum",
   "condition": {
