@@ -1,4 +1,4 @@
-<home wx:if="{{PageCur=='home'}}"></home>
+<!-- <home wx:if="{{PageCur=='home'}}"></home>
 <album wx:if="{{PageCur=='live'}}"></album>
 <mark wx:if="{{PageCur=='mark'}}"></mark>
 <about wx:if="{{PageCur=='about'}}"></about>
@@ -27,4 +27,4 @@
     </view>
     <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
   </view>
-</view>
+</view> -->

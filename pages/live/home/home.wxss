@@ -1,1 +1,8 @@
 /* pages/album/home/home.wxss */
+.nav-list{
+  margin-top: 15px;
+}
+.bg-cyan{
+  background-image: linear-gradient(45deg, #9aadb9, #354855) !important;
+  color: #ffffff !important;
+}

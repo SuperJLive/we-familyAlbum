@@ -7,12 +7,13 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    elements: [{
+    albums: [{
       title: '宝宝相册',
-      name: '妙妙的美妙时光',
+      description: '妙妙的美妙时光',
       color: 'cyan',
       icon: 'babyfill',
-      path:'/pages/live/babyalbum/babyalbum'
+      path:'/pages/live/babyalbum/babyalbum',
+      id:1
     }]
   },
 
@@ -20,14 +21,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    var page=this;
+    wx.request({
+      url: app.globalData.baseUrl+'/WeApp/AlbumOwner/Index',
+      success (res) {
+        page.setData({
+          albums: res.data
+        });
+      }
+    })
   },
 
   /**

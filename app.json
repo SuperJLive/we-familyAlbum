@@ -23,6 +23,44 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor": "#0081ff",
+    "list": [
+        {
+            "pagePath": "pages/home/home/home",
+            "iconPath": "/images/tabbar/home.png",
+            "selectedIconPath": "/images/tabbar/home_cur.png",
+            "text": "首页"
+        },
+        {
+            "pagePath": "pages/live/home/home",
+            "iconPath": "/images/tabbar/live.png",
+            "selectedIconPath": "/images/tabbar/live_cur.png",
+            "text": "空间"
+        },
+        {
+            "pagePath": "pages/mark/home/home",
+            "iconPath": "/images/tabbar/mark.png",
+            "selectedIconPath": "/images/tabbar/mark_cur.png",
+            "text": "足迹"
+        },
+        {
+            "pagePath": "pages/about/home/home",
+            "iconPath": "/images/tabbar/about.png",
+            "selectedIconPath": "/images/tabbar/about_cur.png",
+            "text": "关于"
+        },
+        {
+            "pagePath": "pages/live/babyalbum/babyalbum",
+            "iconPath": "/images/tabbar/about.png",
+            "selectedIconPath": "/images/tabbar/about_cur.png",
+            "text": "我的"
+        }
+    ]
+},
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

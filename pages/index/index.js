@@ -16,6 +16,16 @@ Page({
     this.setData({
       PageCur: e.currentTarget.dataset.cur
     })
+    console.log(this.data.PageCur);
+    wx.switchTab({
+      url: this.data.PageCur,
+      success: function (e) {
+        console.log(e);
+        var page = getCurrentPages().pop();
+        if (page == undefined || page == null) return;
+        page.onLoad();
+      }
+    })
   },
   // 事件处理函数
   bindViewTap() {
