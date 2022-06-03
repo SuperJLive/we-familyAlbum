@@ -1,7 +1,7 @@
 <scroll-view scroll-y class="scrollPage">
-  <image src='/images/AlbumBg.jpg' mode='widthFix' class='png'></image>
+  <image src="{{topBgImage}}" mode='widthFix' class='png'></image>
   <view class='nav-list'>
-    <navigator open-type="navigate" hover-class='none' url="{{'pages/album/'+item.id}}" class="nav-li bg-cyan" wx:for="{{albums}}" wx:key="id">
+    <navigator open-type="navigate" hover-class='none' url="{{'/pages/live/album/album?id='+item.id}}" class="nav-li bg-cyan" wx:for="{{albumOwners}}" wx:key="id">
       <view class="nav-title">{{item.album_name}}</view>
       <view class="nav-name">{{item.description}}</view>
       <text class='cuIcon-babyfill'></text>

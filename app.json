@@ -12,7 +12,9 @@
     "pages/live/createalbum/createalbum",
     "pages/live/Photo/photo",
     "pages/live/showphoto/showphoto",
-    "pages/live/showmedia/showmedia"
+    "pages/live/showmedia/showmedia",
+    
+    "pages/live/album/album"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

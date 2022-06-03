@@ -4,7 +4,7 @@
 <view class="container login">
   <view class="userinfo">
     <block wx:if="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 一键登录 </button>
+      <button class="ui-btn bg-blue" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 一键登录 </button>
       <button class="ui-btn bg-blue" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录 </button>
     </block>
     <block wx:else>

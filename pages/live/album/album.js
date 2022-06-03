@@ -7,29 +7,31 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    topBgImage:app.globalData.baseUrl+'/images/WeApp/AlbumBg.jpg',
-    albums: []
+    albums:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var page=this;
+    const id=options.id;
+    console.log(app.globalData.baseUrl+'/WeApp/Album/Show/'+id);
+    wx.request({
+      url: app.globalData.baseUrl+'/WeApp/Album/Show/'+id,
+      success (res) {
+        page.setData({
+          albums: res.data
+        });
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var page=this;
-    wx.request({
-      url: app.globalData.baseUrl+'/WeApp/AlbumOwner/Index',
-      success (res) {
-        page.setData({
-          albumOwners: res.data
-        });
-      }
-    })
+
   },
 
   /**
