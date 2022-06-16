@@ -9,43 +9,80 @@
       <image src="/images/image1.jpg" mode="widthFix" />
     </view>
   </view>
-  <view class="cu-timeline">
-    <view class="cu-time">8-19</view>
-    <view class="cu-item cur">
-
-      <view class="stack rotated">
-        <image src="/images/share.jpg" mode="widthFix" />
-      </view>
-
-    </view>
-  </view>
-  <view class="cu-timeline">
-    <view class="cu-time">9-17</view>
-    <view class="cu-item cur cuIcon-noticefill">
-      <view class="stack twisted">
-        <image src="/images/image1.jpg" mode="widthFix" />
-      </view>
-
-    </view>
-  </view>
-
-    <view class="cu-timeline">
-      <view class="cu-time">11-17</view>
-      <view class="cu-item cur cuIcon-noticefill">
-        <view class="stack rotated-left">
-          <image src="/images/image1.jpg" mode="widthFix" />
-        </view>
-
-
-
-      </view>
-    </view>
-    
 </view>
+<view class="cu-timeline" wx:for="{{albums}}" wx:key="album_id">
+  <view class="cu-time">{{item.take_stamp}}</view>
+  <view class="cu-item cur">
+
+    <view class="{{tools.albumStyle()}}">
+      <image src="{{baseUrl+item.thumb_path}}" mode="widthFix" />
+    </view>
+
+  </view>
+</view>
+<view class="cu-timeline">
+  <view class="cu-time">8-19</view>
+  <view class="cu-item cur">
+
+    <view class="stack rotated">
+      <image src="/images/share.jpg" mode="widthFix" />
+    </view>
+
+  </view>
+</view>
+<view class="cu-timeline">
+  <view class="cu-time">9-17</view>
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="stack twisted">
+      <image src="/images/image1.jpg" mode="widthFix" />
+    </view>
+
+  </view>
+</view>
+
+<view class="cu-timeline">
+  <view class="cu-time">11-17</view>
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="stack rotated-left">
+      <image src="/images/image1.jpg" mode="widthFix" />
+    </view>
+
+
+
+  </view>
+</view>
+
+
 <view class="createAlbum">
   <navigator open-type="navigate" url="/pages/live/createalbum/createalbum">
-      <image src="/images/albumCreate.png" mode="AspectFit"/>
-    </navigator>
-    </view>
+    <image src="/images/albumCreate.png" mode="AspectFit" />
+  </navigator>
+</view>
 
-    
+<wxs module="tools">
+// var some_msg = "hello world"; 
+// module.exports = {    msg : some_msg, }
+var albumStyle = function () {
+    var ran = Math.floor(Math.random() * 4);
+    console.log(ran);
+    var style="stack twisted"
+    switch (ran) {
+      case 0:
+        style="stack";
+        break;
+      case 1:
+        style="stack rotated";
+        break;
+      case 2:
+        style="stack twisted";
+        break;
+      case 3:
+        style="stack rotated-left";
+        break;
+    }
+    return style;
+  }
+  module.exports = {
+    albumStyle: albumStyle
+}
+</wxs>

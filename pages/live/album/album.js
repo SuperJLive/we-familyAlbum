@@ -7,19 +7,39 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    albums:[]
+    albums: [],
+    baseUrl: app.globalData.baseUrl
   },
-
+  albumStyle: function () {
+    var ran = Math.floor(Math.random() * 4);
+  
+    var style="stack twisted"
+    switch (ran) {
+      case 0:
+        style="stack";
+        break;
+      case 1:
+        style="stack rotated";
+        break;
+      case 2:
+        style="stack twisted";
+        break;
+      case 3:
+        style="stack rotated-left";
+        break;
+    }
+    return style;
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var page=this;
-    const id=options.id;
-    console.log(app.globalData.baseUrl+'/WeApp/Album/Show/'+id);
+    var page = this;
+    const id = options.id;
+    console.log(app.globalData.baseUrl + '/WeApp/Album/Show/' + id);
     wx.request({
-      url: app.globalData.baseUrl+'/WeApp/Album/Show/'+id,
-      success (res) {
+      url: app.globalData.baseUrl + '/WeApp/Album/Show/' + id,
+      success(res) {
         page.setData({
           albums: res.data
         });
