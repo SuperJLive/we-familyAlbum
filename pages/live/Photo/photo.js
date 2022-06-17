@@ -1,18 +1,31 @@
-// pages/live/Photo/photo.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    pageTitle:'',
+    pageData: [],
+    baseUrl: app.globalData.baseUrl
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var page = this;
+    const albumId = options.albumId;
+    wx.request({
+      url: app.globalData.baseUrl + '/WeApp/Photo/Index/' + albumId,
+      success(res) {
+        console.log(res);
+        page.setData({
+          photos: res.data.photos,
+          pageTitle:res.data.album.title
+        });
+      }
+    })
   },
 
   /**

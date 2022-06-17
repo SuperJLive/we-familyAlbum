@@ -1,36 +1,40 @@
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
    <view slot="backText">返回</view>
-   <view slot="content">卡片</view>
+   <view slot="content">{{pageTitle}}</view>
 </cu-custom>
 <view class="waterfall">
+  <view class="item" wx:for="{{photos}}" wx:key="id">
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="{{baseUrl+item.thumb_path}}"/>
+  </view>
+
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm1.jpg"/>1
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm1.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm2.jpg"/>2
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm2.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm3.jpg"/>3
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm3.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm4.jpg"/>4
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm4.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm5.jpg"/>5
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm5.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm6.jpg"/>6
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm6.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm7.jpg"/>7
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm7.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm8.jpg"/>8
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm8.jpg"/>
   </view>
   <view class="item">
-    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm9.jpg"/>9
+    <image   style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm9.jpg"/>
   </view>
   <view class="item">
-    <image  style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm10.jpg"/>10
+    <image  style="width:100%;"  mode="widthFix"  lazy-load     preview src="/images/mm/mm10.jpg"/>
   </view>
 </view>
